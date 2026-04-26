@@ -1,0 +1,93 @@
+# ===========================
+# SECRETS — NEVER COMMIT
+# ===========================
+.env
+.env.*
+!.env.example
+
+# ===========================
+# MAVEN
+# ===========================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.properties
+
+# ===========================
+# SPRING BOOT
+# ===========================
+application-local.yml
+application-local.properties
+application-secret*.yml
+application-secret*.properties
+
+# ===========================
+# JAVA
+# ===========================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# ===========================
+# INTELLIJ IDEA
+# ===========================
+**/.idea/
+**/*.iml
+**/*.iws
+**/*.ipr
+**/out/
+**/.idea_modules/
+
+# ===========================
+# VS CODE
+# ===========================
+.vscode/
+*.code-workspace
+
+# ===========================
+# ECLIPSE
+# ===========================
+.classpath
+.project
+.settings/
+bin/
+.factorypath
+
+# ===========================
+# DOCKER
+# ===========================
+# Keep docker-compose.yml but ignore overrides with secrets
+docker-compose.override.yml
+
+# ===========================
+# OS FILES
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V7
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===========================
+# LOGS
+# ===========================
+*.log
+logs/
+spring.log
+
+# ===========================
+# MISC
+# ===========================
+*.swp
+*.swo
+*~
