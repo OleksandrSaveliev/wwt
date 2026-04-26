@@ -1,10 +1,11 @@
-package com.wwt.authapi.service;
+package com.wwt.authapi.service.impl;
 
 import com.wwt.authapi.dto.LoginRequest;
 import com.wwt.authapi.dto.RegisterRequest;
 import com.wwt.authapi.entity.User;
 import com.wwt.authapi.repository.UserRepository;
 import com.wwt.authapi.security.JwtUtils;
+import com.wwt.authapi.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

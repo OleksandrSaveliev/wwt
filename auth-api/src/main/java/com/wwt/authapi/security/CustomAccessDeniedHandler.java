@@ -1,6 +1,7 @@
 package com.wwt.authapi.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.wwt.authapi.dto.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

@@ -5,3 +5,6 @@ server:
   port: 8081
 internal:
   token: ${INTERNAL_TOKEN}
+logging:
+  level:
+    com.wwt.dataapi: DEBUG
