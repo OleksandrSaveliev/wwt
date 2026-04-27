@@ -1,5 +1,6 @@
 package com.wwt.dataapi.service.impl;
 
+import com.wwt.dataapi.dto.TransformResponse;
 import com.wwt.dataapi.service.TransformService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class TransformServiceImpl implements TransformService {
 
     @Override
-    public String transform(String input) {
+    public TransformResponse transform(String input) {
         log.debug("Transforming input of length {}", input.length());
 
         String result = new StringBuilder(input)
@@ -19,6 +20,6 @@ public class TransformServiceImpl implements TransformService {
 
         log.debug("Transform complete: '{}' -> '{}'", input, result);
 
-        return result;
+        return new TransformResponse(result);
     }
 }

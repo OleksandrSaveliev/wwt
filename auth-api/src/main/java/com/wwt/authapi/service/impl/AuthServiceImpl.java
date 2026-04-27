@@ -1,5 +1,6 @@
 package com.wwt.authapi.service.impl;
 
+import com.wwt.authapi.dto.AuthResponse;
 import com.wwt.authapi.dto.LoginRequest;
 import com.wwt.authapi.dto.RegisterRequest;
 import com.wwt.authapi.entity.User;
@@ -37,12 +38,12 @@ public class AuthServiceImpl implements AuthService {
         userRepository.save(user);
     }
 
-    public String authenticate(LoginRequest request) {
+    public AuthResponse authenticate(LoginRequest request) {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.email(), request.password())
         );
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        return jwtUtils.generateJwtToken(authentication);
+        return new AuthResponse(jwtUtils.generateJwtToken(authentication));
     }
 }

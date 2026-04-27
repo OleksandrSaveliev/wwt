@@ -20,7 +20,7 @@ public class TransformController {
 
     @PostMapping("transform")
     public ResponseEntity<TransformResponse> transform(@Valid @RequestBody TransformRequest body) {
-        String transformedText = transformService.transform(body.text());
-        return ResponseEntity.ok(new TransformResponse(transformedText));
+        TransformResponse transformedText = transformService.transform(body.text());
+        return ResponseEntity.ok(transformedText);
     }
 }

@@ -1,5 +1,7 @@
 package com.wwt.dataapi.service;
 
+import com.wwt.dataapi.dto.TransformResponse;
+
 public interface TransformService {
-    String transform(String input);
+    TransformResponse transform(String input);
 }
