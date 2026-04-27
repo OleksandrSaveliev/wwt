@@ -1,10 +1,10 @@
-spring:
+﻿spring:
   application:
     name: data-api
 server:
   port: 8081
-internal:
-  token: ${INTERNAL_TOKEN}
+app:
+  internal-token: ${INTERNAL_TOKEN}
 logging:
   level:
     com.wwt.dataapi: DEBUG

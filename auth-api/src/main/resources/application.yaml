@@ -1,10 +1,10 @@
-spring:
+﻿spring:
   application:
     name: auth-api
   datasource:
-    url: ${SPRING_DATASOURCE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    url: ${POSTGRES_URL}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -17,6 +17,9 @@ spring:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: true
-
 server:
   port: 8080
+app:
+  jwt-secret: ${JWT_SECRET}
+  internal-token: ${INTERNAL_TOKEN}
+  service-b-url: ${SERVICE_B_URL}
